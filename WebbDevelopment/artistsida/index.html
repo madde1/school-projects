@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset =utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel ="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Metamorphous|Uncial+Antiqua" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title> Ghost </title>
+
+</head>
+
+<header>
+
+
+    <div class="topnav" id="myTopnav">
+        <img id ="logoHead" src="bilder/logo1.jpg">
+        <a  href="index.html" >Home</a>
+        <a  href="undersidor/news.html">News</a>
+        <div class="dropdown">
+            <button  class="dropbtn">Music<i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <a href="undersidor/meloria.html">Meliora</a>
+                <a  href="undersidor/prequelle.html">Prequelle </a>
+            </div>
+        </div>
+        <a href="undersidor/theband.html">The band</a>
+        <a href="undersidor/livedates.html">Live dates</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        <div class="search-container">
+           <gcse:search></gcse:search>
+        </div>
+        <button class="openbutton" onclick="openSign()">Sign up</button>
+         <div class="formPopup" id="mySign">
+             <form action="/action_page.php" class="formContainer">
+                 <h3>Sign Up</h3>
+                 <label for="name" class="required">Name</label>
+                 <input type ="text" placeholder="Name" name="name" required>
+                 <label for ="email" class="required">Email</label>
+                 <input type="email" placeholder="Enter Email" name="email" required>
+                 <label for ="password" class="required">Password</label>
+                 <input type="password" placeholder="Password" name="password" required>
+                 <label for="conf-password" class="required">Confirm Password</label>
+                 <input type="password" placeholder="Repeat Password" name="psw" required>
+                 <button type="submit" class="signbtn" value="Sign up">Subscribe</button>
+                 <button type="submit" class="signbtncancel" onclick="closeSignForm()">Close</button>
+            </form>
+        </div>
+             <a id="social" href="https://sv-se.facebook.com/thebandghost" target="_blank"><img src="bilder/face1.png"></a>
+             <a id="social" href="https://twitter.com/thebandGHOST" target="_blank"><img src="bilder/twitter.png"></a>
+             <a id="social" href="https://www.instagram.com/thebandghost/?hl=sv" target="_blank"><img src="bilder/insta.png"> </a>
+    </div>
+</div>
+
+</div>
+
+
+</header>
+
+<body id="ghost">
+<script src="undersidor/add-conten.js"></script>
+
+<!--<aside>
+    <p>Ghost is a Swedish rock band that was formed in Linköping,
+        Sweden in 2006. In 2010, they released a 3-track demo followed by a 7" vinyl titled "Elizabeth",
+        and later their debut full-length album Opus Eponymous.</p>
+</aside>-->
+
+<!--<article>-->
+   <!--<div class="grid-container">
+        <div class="grid-item">
+
+<p>
+Ghost is a Swedish rock band that was formed in Linköping, 
+Sweden in 2006. In 2010, they released a 3-track demo followed by a 7" vinyl titled "Elizabeth",
+and later their debut full-length album Opus Eponymous.
+ The Grammis-nominated album was widely praised and significantly increased their popularity. 
+ Their second album and major label debut Infestissumam was released in 2013, 
+ debuted at number one in Sweden, and won the Grammis Award for Best Hard Rock/Metal Album. 
+ The band released their third studio album, Meliora, in 2015, to much critical acclaim and high record sales, 
+ reaching number one in their home country of Sweden, and number eight in the United States. Its lead single, 
+ "Cirice", earned them the 2016 Grammy Award for Best Metal Performance. The band released their fourth studio album, Prequelle, in 2018.
+</p> </div>
+        <div class="grid-item">
+<img class="pic" id="ghost1" src="bilder/ghost1.png" alt="Ghost"></img>
+        </div>
+    </div>
+</article>-->
+<button class="open-button" onclick="openForm()">Subscribe to Newsletter</button>
+<div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+        <h3>Newsletter</h3>
+        <input type ="text" placeholder="Name" name="name" required>
+        <input type="text" placeholder="Enter Email" name="email" required>
+        <div id="checkbox">
+        <label>
+            <input type="checkbox" checked="checked" name="subscribe">Monthly Newsletter</label>
+        </label>
+        </div>
+        <button type="submit" class="newsbtn" value="Subscribe">Subscribe</button>
+        <button type="submit" class="newsbtncancel" onclick="closeNewsForm()">Close</button>
+    </form>
+
+</div>
+<footer>
+    <p> Made by Madeleine Hallqvist ©</p>
+</footer>
+
+</body>
+
+
+
+<script>
+    function openSign() {
+        document.getElementById("mySign").style.display="block";}
+    function closeSignForm() {
+        document.getElementById("mySign").style.display="none";
+    }
+
+function openForm() {
+    document.getElementById("myForm").style.display="block";
+}
+function closeNewsForm() {
+    document.getElementById("myForm").style.display="none";
+}
+</script>
+<script>
+    (function() {
+        var cx = '016114308765016976767:ol5d1-vb8y0';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+    })();
+</script>
+</html>
