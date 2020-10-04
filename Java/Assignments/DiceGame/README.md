@@ -6,7 +6,12 @@ Description You have to make a dice game where you play against the computer. Th
 
 The assignment must be done individually.
 
-Grading criteria Requirements for G
 • You must be able to choose the number of throws.
 • You must print the sum for the player and the computer for each roll. As well as the total sum for the player and the computer.
 • You should be able to see if the player or computer won, based on that a winner is printed.
+
+In addition to the basic task:
+
+You should also be able to choose the number of players (then you can choose to exclude the computer as a player).
+You should make a high-score list that is saved in an array.
+You should be able to describe some of the choices you have made to meet the requirements of the application and examples of how you have set up the work. Submit in writing as, for example, a word file together with the source code for the application.
