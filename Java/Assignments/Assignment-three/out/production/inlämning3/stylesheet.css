@@ -1,0 +1,32 @@
+.root{
+    -fx-font-size: 14pt;
+    -fx-font-family: "Arial";
+    -fx-background-color:
+    linear-gradient(to bottom right, rgb(165,168,143), rgb(176, 148,0));
+
+}
+#heading{
+-fx-font-family:"Arial";
+-fx-font-size:40px;
+-fx-text-fill: rgb(49, 89, 23);
+-fx-text-alignment: center;
+
+}
+#player{
+-fx-text-fill: rgb(49, 89, 23);
+}
+#textruta{
+    -fx-background-color: transparent, white, transparent, white;
+    -fx-background-radius: 10;
+    -fx-padding: 0.166667em;
+
+}
+#btn{
+-fx-background-radius:10;
+-fx-background-color: rgb(255,170,0);
+}
+#btn:hover {
+      -fx-background-color: #004E6F;
+      -fx-text-fill:white;
+      -fx-scale-y: 1.1;
+    }
