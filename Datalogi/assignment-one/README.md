@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# school-projects
-Small school projects in java
-=======
+
 # Task 1 - Arrays
 char [] charArray1 = {'s', 't', 'r', 'i', 'n', 'g'};
 
