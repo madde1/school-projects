@@ -1,2 +1,2 @@
-# school-projects
-Small school projects in java
+# School Projects
+Projects from my education in fullstack developer at Campus Mölndal
