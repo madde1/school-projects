@@ -1,0 +1,105 @@
+/*Skapar en databas för ett Art Gallery som ska innehålla delarna nedan:*/
+/*Gallery
+Artist - artistId(PK), artistName
+WorkType - workTypeId(PK), workTypeOfArtist
+GalleryKey - galleryId(PK), galleryArtId(FK), galleryArtistId(FK), galleryWorkTypeId(FK)
+Art - artId(PK), artTitle, artYear, artPrice, artTypeOfArtId(FK), artCollaboratorId(FK)
+TypeOfArt - typeOfArtId(PK),typeOfArtGenre
+Collaborator - collaboratorId(PK), collaboratorName, collaboratorType 
+ */
+
+ /*Artist Create new table*/
+ create table artist(
+ 	artistId int not null auto_increment, 
+ 	artistName varchar(50),
+ 	primary key(artistId)
+ 	);
+
+ /*WorkType Create new table*/
+ create table workType(
+ 	workTypeId int not null auto_increment,
+ 	workTypeOfArtist varchar(50),
+ 	primary key(workTypeId)
+ 	);
+
+ /*Gallery Key create table*/
+ create table galleryKey(
+ 	galleryId int not null auto_increment,
+ 	galleryArtistId int, 
+ 	galleryArtId int, 
+ 	galleryWorkTypeId int,
+ 	primary key(galleryId),
+ 	foreign key(galleryArtId) references art(artid),
+ 	foreign key(artistId) references artist(artistId),
+ 	foreign key(galleryWorkTypeId) references workType(workTypeId)
+ 	);
+
+ /*Art create new table*/
+ create table art(
+ 	artid int not null auto_increment,
+ 	artTitle varchar(255),
+ 	artYear int,
+ 	artPrice int,
+ 	artTypeOfArtId int,
+ 	artCollaboratorId int,
+ 	primary key(artid),
+ 	foreign key(artTypeOfArtId) references typeOfArt(typeOfArtId),
+ 	foreign key(artCollaboratorId) references collaborator(collaboratorId)
+ 	);
+
+  /*TypeOfArt create table*/
+ create table typeOfArt(
+ 	typeOfArtId int not null auto_increment,
+ 	typeOfArtGenre varchar(50),
+ 	primary key(typeOfArtId)
+ 	);
+
+ /*Collaborator create table*/
+ create table collaborator(
+ 	collaboratorId int not null auto_increment,
+ 	collaboratorName varchar(50),
+ 	collaboratorType varchar(50),
+ 	primary key(collaboratorId)
+ 	);
+
+/*Insert into delar*/
+insert into artist(artistName)
+values('Sandro Boticelli'),('Claude Monet'),('Rembrandt van Rijn'),
+('Edvard Munch'),('Johannes Vermeer'),('Pablo Picasso'),('Michelangelo'),
+('Leonardo da Vinci'),('Vincent van Gogh');
+
+insert into art(artTitle,artYear,artPrice,artTypeOfArtId)
+values('Venus födelse',1485,1200000,1),('Näckrosor',1919,1300000,2),
+('Nattvakten',1642,20000000,3),('Skriet',1893,21000000,4),	
+('Flicka med pärlörhänge',1600,15000000,3),('Guernica',1937,5000000,5),
+('Adams skapelse',1511,30000000,6),('Nattvarden',1400,40000000,6),
+('Stjärnenatt',1889,45000000,7);
+
+insert into typeOfArt(typeOfArtGenre)
+values('Klassicismen'),('Impressionismen'),('Barocken'),
+('Expressionismen'),('Kubism'),('Renässansen'),
+('Modernistisk');
+
+insert into workType(workTypeOfArtist)
+values('Konstnär');	
+
+insert into galleryKey(galleryArtistId,galleryArtId,galleryWorkTypeId)
+VALUES(1,10,1),(2,11,1),(3,12,1),(4,13,1),(5,14,1),(6,15,1),(7,16,1),
+(8,17,1),(9,18,1);
+
+select artist.artistName, art.artTitle,workType.workTypeOfArtist
+from art inner join galleryKey
+on art.artId = galleryKey.galleryArtId
+inner join artist
+on galleryKey.galleryArtistId = artist.artistId
+inner join workType
+on workType.workTypeId = galleryKey.galleryId;
+
+
+INSERT INTO bokKategori (bokKategoriBid,bokKategoriKid) VALUES(1,1);
+
+SELECT bok.bokTitel, kategori.kategoriNamn
+FROM kategori INNER JOIN bokKategori 
+ON kategori.kategoriId = bokKategori.bokKategoriKid
+INNER JOIN bok 
+ON bokKategori.bokKategoriBid = bok.bokId;
