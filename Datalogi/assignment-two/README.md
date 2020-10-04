@@ -27,7 +27,4 @@ f) A search box should now be displayed to the user. Upon input, the program mus
 (Extra)
 
 g) Increase the number of options in your initial mode to four options. The new option should ask how many new prime numbers the user wants to find and only receive int of type int in their input field. The program must then find the highest value in the data structure and look for x new prime numbers with a higher value and insert these into the data structure.
-Skicka feedback
-Historik
-Sparad
-Grupp
+
